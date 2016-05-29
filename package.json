@@ -1,0 +1,9 @@
+{
+  "name": "IRC-by-PArYSuS",
+  "version": "0.0.1",
+  "description": "BETTER-IRC",
+  "dependencies":
+  {
+    "express": "^4.10.2"
+  }
+}
