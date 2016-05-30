@@ -1,0 +1,92 @@
+<!DOCTYPE>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+		<title>Ircek</title>
+		<style>
+			html, body{
+				margin: 0;
+				padding: 0;
+				width: 100%;
+				height: 100%;
+				font-family: Arial, sans-serif;
+			}
+			.loginPage, .ircPage {
+				width: 100%;
+				height: 100%;
+				position: fixed;
+				background: white;
+			}
+			.loginPage {
+				z-index: 20;
+			}
+			.loginInput {
+				left: 50%;
+				top: 50%;
+				position: absolute;
+				transform: translate(-50%, -50%)
+			}
+			.hidden{
+				display: none;
+			}
+			
+			.ircContainer {
+				position: absolute;
+				width: 50%;
+				height: 50%;
+				border: 1px dashed black;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+			}
+			
+			.ircOutput{
+				height: calc(100% - 50px);
+			}
+			.ircMessage {
+				height: 50px;
+			}
+			
+			.ircMessage input{
+				height: 100%;
+				border: none;
+				border-color: none;
+				border-top: 1px dashed black;
+				width: 100%;
+				font-size: 15px;
+			}
+			
+		</style>
+		<script>
+			$(document).ready(function(){
+				var logged = false;
+				$(this).on('keydown', function(e){
+					if(e.keyCode == 13){
+						if(!logged && $('[name=login]').val() != ''){
+							$('.loginPage').addClass('hidden');
+						}
+						else{
+							
+						}
+					}
+				})
+			});
+		</script>
+	</head>
+	<body>
+		<div class="loginPage">
+			<div class="loginInput">
+			<label>Nick: <input name="login"></label>
+			</div>
+		</div>
+		<div class="ircPage">
+			<div class="ircContainer">
+				<div class="ircOutput"></div>
+				<div class="ircMessage">
+					<input name="message">
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
