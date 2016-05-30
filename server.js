@@ -5,7 +5,7 @@ var port = Number( process.env.PORT || 3000)
 
 app.use(express.static('public'))
 
-app.get('/', function(req, res){
+app.post('/', function(req, res){
     res.send('<h1>Hello world</h1>');
 });
 
