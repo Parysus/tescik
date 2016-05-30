@@ -67,10 +67,20 @@
 							$('.loginPage').addClass('hidden');
 						}
 						else{
-							
+							sendMessage();
 						}
 					}
-				})
+				});
+				
+				function sendMessage(){
+					$.ajax({
+						url: 'http://irc-by-parysus.herokuapp.com',
+						method: 'POST',
+						success: function(data){
+							console.log('success');
+						}
+					});
+				}
 			});
 		</script>
 	</head>
